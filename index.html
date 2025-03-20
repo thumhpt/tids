@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Run R Code with ThebeLab</title>
+    
+    <!-- Load ThebeLab -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/thebelab/0.4.1/thebelab.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+    
+    <!-- Style -->
+    <style>
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
     <h2>Compute the square root of 2:</h2>
-    <pre data-executable>
-    ```r
-    sqrt(2)
-    ```
+    
+    <!-- Code block for ThebeLab -->
+    <pre data-executable data-language="r">
+sqrt(2)
     </pre>
+    
     <button onclick="thebelab.bootstrap()">Run Code</button>
 
     <script>
+        thebelab.on("status", function(evt, data) {
+            console.log("Thebelab status:", data.status);
+        });
+
         thebelab.bootstrap();
     </script>
 
