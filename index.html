@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run R Code with ThebeLab</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/thebelab/0.4.1/thebelab.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+</head>
+<body>
+
+    <h2>Compute the square root of 2:</h2>
+    <pre data-executable>
+    ```r
+    sqrt(2)
+    ```
+    </pre>
+    <button onclick="thebelab.bootstrap()">Run Code</button>
+
+    <script>
+        thebelab.bootstrap();
+    </script>
+
+</body>
+</html>
